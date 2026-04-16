@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Add Course | Your Courses</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <a href="../index.html"><img src="../assets/images/Your-courses-logo.svg" alt="Your courses logo"></a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="my-courses.html">My Courses</a></li>
+                <li><a href="add-courses.html" class="active">Add Course</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="add-course section">
+            <div class="container">
+                <div class="add-course-intro flex-between">
+                    <div class="intro-text">
+                        <h1>Curate a New Path</h1>
+                        <p>Incorporate new disciplines into your digital library.</p>
+                    </div>
+                    <div class="guidelines-card">
+                        <h3>Curator Guidelines</h3>
+                        <ul>
+                            <li><span>01.</span> Verify credit weighting.</li>
+                            <li><span>02.</span> Use full titles for instructors.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <form class="add-course-form">
+                        <div class="form-group">
+                            <label>COURSE NAME</label>
+                            <input type="text" placeholder="e.g. Advanced Epistemology">
+                        </div>
+                        <div class="form-row" style="display:flex; gap:20px;">
+                            <div class="form-group" style="flex:1;">
+                                <label>INSTRUCTOR</label>
+                                <input type="text" placeholder="Dr. Julian Vane">
+                            </div>
+                            <div class="form-group" style="flex:1;">
+                                <label>CREDITS</label>
+                                <input type="number" placeholder="4">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>CURATORIAL NOTES</label>
+                            <textarea placeholder="Specify course prerequisites..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="primary-cta">Submit Course</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="logofooter">
+            <img src="../assets/images/Your-Courses-footer.svg" alt="footer logo">
+        </div>
+        <h6>© 2026 Your Courses. Your all Tracker.</h6>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Help Center</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
