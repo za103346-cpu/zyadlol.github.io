@@ -1,20 +1,22 @@
 /*======== DESIGN SYSTEM LIBRARY =========*/
 
-/* 1. VARIABLES & DESIGN TOKENS */
+/* VARIABLES */
 :root {
-    /* Colors */
     --primary-green: #10b981;
     --dark-green: #004d33;
     --cta-green: #00966b;
+
     --bg-light: #f9fbfb;
     --bg-mint: #f0fdf9;
+
     --text-main: #333333;
     --text-muted: #555555;
+
     --white: #ffffff;
-    
-    /* Layout */
-    --container-padding: 10%; 
+
+    --container-padding: 10%;
     --section-v-padding: 80px;
+
     --radius-lg: 40px;
     --radius-md: 20px;
     --radius-sm: 12px;
@@ -37,46 +39,64 @@ body {
     overflow-x: hidden;
 }
 
-/* underline and bullets */
-a { 
-    text-decoration: none; 
-    color: inherit; 
-    transition: all 0.3s ease; 
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
 }
 
-ul { list-style: none; }
+/* LIST */
+ul {
+    list-style: none;
+}
 
+/* BUTTON */
 button {
     border: none;
     outline: none;
     background: none;
     font-family: inherit;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
-/* font sizes */
-h1, h2, h3 { 
-    color: var(--dark-green); 
-    font-weight: 800; 
+/* HEADINGS */
+h1 {
+    color: var(--dark-green);
+    font-weight: 800;
 }
 
-/* 3. REUSABLE COMPONENTS */
+h2 {
+    color: var(--dark-green);
+    font-weight: 800;
+}
 
-/* --- Navigation --- */
+h3 {
+    color: var(--dark-green);
+    font-weight: 800;
+}
+
+/* HEADER */
 .header {
     background-color: var(--bg-mint);
-    padding: 20px var(--container-padding);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Fixes Nav Overlap */
+
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-.header nav ul { 
-    display: flex; 
-    gap: 35px; 
+/* NAV */
+.header nav ul {
+    display: flex;
+    gap: 35px;
     flex-wrap: wrap;
 }
 
@@ -87,27 +107,39 @@ h1, h2, h3 {
     padding-bottom: 4px;
 }
 
-.header nav ul li a:hover { color: var(--primary-green); }
+.header nav ul li a:hover {
+    color: var(--primary-green);
+}
 
 .header nav ul li a.active {
     font-weight: 700;
-    border-bottom: 2px solid var(--primary-green);
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--primary-green);
 }
 
-/* --- Hero Section --- */
+/* SECTION */
 .section {
-    padding: var(--section-v-padding) var(--container-padding);
+    padding-top: var(--section-v-padding);
+    padding-bottom: var(--section-v-padding);
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
 }
 
+/* HOME */
 .home.section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px; /* Prevents text/image overlap */
+    gap: 80px;
     flex-wrap: wrap;
 }
 
-.left-col { flex: 1.2; min-width: 320px; }
+/* LEFT */
+.left-col {
+    flex: 1.2;
+    min-width: 320px;
+}
 
 .left-col h1 {
     font-size: 3.5rem;
@@ -115,7 +147,9 @@ h1, h2, h3 {
     margin-bottom: 25px;
 }
 
-.left-col h1 span { color: var(--primary-green); }
+.left-col h1 span {
+    color: var(--primary-green);
+}
 
 .subhead {
     color: var(--text-muted);
@@ -123,24 +157,46 @@ h1, h2, h3 {
     margin-bottom: 40px;
 }
 
-/* --- Buttons --- */
-.primary-cta, .submit-btn {
+/* BUTTONS */
+.primary-cta {
     background-color: var(--cta-green);
-    color: var(--white) !important;
-    padding: 18px 40px;
+    color: var(--white);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 40px;
+    padding-right: 40px;
     border-radius: var(--radius-sm);
     font-weight: 600;
     display: inline-block;
     box-shadow: 0 10px 25px rgba(0, 150, 107, 0.2);
 }
 
-.primary-cta:hover, .submit-btn:hover {
+.submit-btn {
+    background-color: var(--cta-green);
+    color: var(--white);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    display: inline-block;
+    box-shadow: 0 10px 25px rgba(0, 150, 107, 0.2);
+}
+
+.primary-cta:hover {
     background-color: var(--dark-green);
     transform: translateY(-3px);
     box-shadow: 0 15px 30px rgba(0, 77, 51, 0.3);
 }
 
-/* --- Centered Quote Section --- */
+.submit-btn:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 77, 51, 0.3);
+}
+
+/* QUOTE */
 .quote.section {
     display: flex;
     flex-direction: column;
@@ -158,33 +214,62 @@ h1, h2, h3 {
 .quoted h2 {
     font-size: 2.2rem;
     max-width: 850px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* --- Illustration & Overlay (hero section's right) --- */
-.right-col { flex: 1; display: flex; justify-content: flex-end; min-width: 320px; }
-.illustration { position: relative; width: 100%; max-width: 480px; }
-.illustration img:not(.overlay img) { width: 100%; border-radius: 24px; }
+/* RIGHT */
+.right-col {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 320px;
+}
 
+.illustration {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+}
+
+.illustration img {
+    width: 100%;
+    border-radius: 24px;
+}
+
+/* OVERLAY */
 .overlay {
     position: absolute;
     bottom: 25px;
     left: -35px;
-    background: white;
+    background-color: white;
     padding: 12px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-.overlay img { width: 160px; display: block; }
 
-/* --- Forms (Add Course & Contact) --- */
-.form-container, .contact-form-container {
-    background: #eef2f2;
+.overlay img {
+    width: 160px;
+    display: block;
+}
+
+/* FORM */
+.form-container {
+    background-color: #eef2f2;
     padding: 50px;
     border-radius: var(--radius-lg);
 }
 
-.form-group { margin-bottom: 20px; }
+.contact-form-container {
+    background-color: #eef2f2;
+    padding: 50px;
+    border-radius: var(--radius-lg);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
 .form-group label {
     font-size: 0.75rem;
     font-weight: 700;
@@ -194,7 +279,27 @@ h1, h2, h3 {
     margin-bottom: 8px;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    border: none;
+    background-color: #e2e8e8;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    border: none;
+    background-color: #e2e8e8;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group textarea {
     width: 100%;
     padding: 16px 20px;
     border-radius: var(--radius-md);
@@ -205,37 +310,75 @@ h1, h2, h3 {
     resize: none;
 }
 
-/* --- Footer --- */
+/* FOOTER */
 .footer {
     background-color: var(--dark-green);
     color: var(--white);
-    padding: 60px var(--container-padding);
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+
     border-radius: 60px 60px 0 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 25px;
     text-align: center;
 }
 
-.footer-links { display: flex; gap: 30px; }
-.footer-links a:hover { text-decoration: underline; color: var(--primary-green); }
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
 
-/* 4. RESPONSIVE MEDIA QUERIES */
+.footer-links a:hover {
+    text-decoration: underline;
+    color: var(--primary-green);
+}
+
+/* MEDIA */
 @media (max-width: 992px) {
-    :root { --container-padding: 5%; }
-    .home.section { flex-direction: column; text-align: center; }
-    .right-col { justify-content: center; }
-    .left-col h1 { font-size: 2.8rem; }
-    .overlay { left: 50%; transform: translateX(-50%); bottom: -20px; }
+    :root {
+        --container-padding: 5%;
+    }
+
+    .home.section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right-col {
+        justify-content: center;
+    }
+
+    .left-col h1 {
+        font-size: 2.8rem;
+    }
+
+    .overlay {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
+    }
 }
 
 @media (max-width: 600px) {
-    .header { justify-content: center; text-align: center; }
-    .header nav ul { justify-content: center; gap: 15px; }
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
 }
 
-/* --- My Courses Page Specifics --- */
+/* PORTFOLIO */
 .portfolio-header {
     margin-bottom: 50px;
 }
@@ -253,7 +396,7 @@ h1, h2, h3 {
 }
 
 .stat-card {
-    background: var(--white);
+    background-color: var(--white);
     padding: 30px;
     border-radius: var(--radius-md);
     flex: 1;
@@ -273,8 +416,9 @@ h1, h2, h3 {
     margin-top: 10px;
 }
 
+/* TABLE */
 .table-wrapper {
-    background: var(--white);
+    background-color: var(--white);
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -292,7 +436,11 @@ h1, h2, h3 {
     color: var(--white);
 }
 
-.course-table th, .course-table td {
+.course-table th {
+    padding: 20px;
+}
+
+.course-table td {
     padding: 20px;
 }
 
@@ -300,8 +448,9 @@ h1, h2, h3 {
     border-bottom: 1px solid #eee;
 }
 
+/* TAG */
 .status-tag {
-    background: #d1fae5;
+    background-color: #d1fae5;
     color: #065f46;
     padding: 5px 12px;
     border-radius: 12px;
@@ -309,6 +458,7 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
+/* ACTION */
 .action-btn {
     color: var(--cta-green);
     font-weight: 700;
